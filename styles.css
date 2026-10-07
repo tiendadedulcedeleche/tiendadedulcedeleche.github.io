@@ -123,11 +123,15 @@ em { font-style: normal; }
 
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; }
 
+/* El isologo de la marca: la imagen redonda de img\logo. Si algun dia vuelve
+   a ser las iniciales (TDL) en texto, el circulo se ve igual. */
 .logo__mark {
   display: grid;
   place-items: center;
   width: 36px; height: 36px;
-  border-radius: 10px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
   background: var(--brand);
   color: #fff;
   font-size: 14px;
@@ -737,7 +741,7 @@ a.contact__item:hover { border-color: var(--brand); transform: translateY(-3px);
      nombre le faltaban 3 px justos y quedaba cortado. */
   .header__inner { gap: 10px; }
   .logo { font-size: 15px; gap: 8px; }
-  .logo__mark { flex: none; width: 32px; height: 32px; font-size: 12px; border-radius: 9px; }
+  .logo__mark { flex: none; width: 32px; height: 32px; font-size: 12px; }
   .logo, .logo__text { min-width: 0; }
   .logo__text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cart-btn { flex: none; margin-left: auto; }

@@ -593,8 +593,11 @@
       el.textContent = CONFIG.nombreNegocio;
     });
 
+    // El circulito del logo ahora es la imagen de la marca
+    // (img/logo/logo-tdl.jpg), asi que se lo deja como esta. Si algun dia
+    // vuelve a ser texto, se le ponen las iniciales.
     const marca = document.querySelector('.logo__mark');
-    if (marca) marca.textContent = siglaDe(CONFIG.nombreNegocio);
+    if (marca && marca.tagName !== 'IMG') marca.textContent = siglaDe(CONFIG.nombreNegocio);
 
     const anio = $('#year');
     if (anio) anio.textContent = new Date().getFullYear();
